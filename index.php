@@ -2,25 +2,32 @@
 
 // Get secrets from ROSA and load into variables
 // Database connection details (replace with your own)
-$username = getenv('DB_USER');
-if ($username === false) {
-  throw new Exception('Failed to retrieve ROSA secret from environment');
-}
+#$username = getenv('DB_USER');
+#if ($username === false) {
+#  throw new Exception('Failed to retrieve ROSA secret from environment');
+#}
 
-$password = getenv('DB_USER_PASSWORD');
-if ($password === false) {
-  throw new Exception('Failed to retrieve ROSA secret from environment');
-}
+#$password = getenv('DB_USER_PASSWORD');
+#if ($password === false) {
+#  throw new Exception('Failed to retrieve ROSA secret from environment');
+#}
 
-$dbname = getenv('DATABASE');
-if ($rosa_db === false) {
-    throw new Exception('Failed to retrieve ROSA secret from environment');
-}
+#$dbname = getenv('DATABASE');
+#if ($rosa_db === false) {
+#    throw new Exception('Failed to retrieve ROSA secret from environment');
+#}
 
-$table = "students";
-if ($table === false) {
-  throw new Exception('Failed to retrieve ROSA secret from environment');
-}
+#$table = "students";
+#if ($table === false) {
+#  throw new Exception('Failed to retrieve ROSA secret from environment');
+#}
+
+// These are the hardcoded database variables
+$servername = "10.129.0.17";
+$username = "brendan123";
+$password = "this-is-3857-password";
+$dbname = "students";
+$tablename = "students";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
