@@ -27,7 +27,7 @@ $servername = "mysql";
 $username = "root";
 $password = "this-is-the-root-785-password";
 $dbname = "students";
-$table = "students";
+$tablename = "students";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -39,7 +39,7 @@ if ($conn->connect_error) {
 
 // Function to display all data from the database
 function displayData($conn) {
-  $sql = "SELECT * FROM $table";
+  $sql = "SELECT * FROM $tablename";
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
