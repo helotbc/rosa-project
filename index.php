@@ -23,7 +23,7 @@
 #}
 
 // These are the hardcoded database variables
-$servername = "10.129.0.111";
+$servername = "mysql";
 $username = "brendan123";
 $password = "this-is-3857-password";
 $dbname = "students";
