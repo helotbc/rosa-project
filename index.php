@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $lastname = $conn->real_escape_string($_POST["lastname"]);
   $email = $conn->real_escape_string($_POST["email"]);
 
-  $sql = "INSERT INTO $table (firstname, lastname, email)
+  $sql = "INSERT INTO $tablename (firstname, lastname, email)
   VALUES ('$firstname', '$lastname', '$email')";
 
   if ($conn->query($sql) === TRUE) {
