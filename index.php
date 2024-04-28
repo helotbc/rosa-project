@@ -24,10 +24,10 @@
 
 // These are the hardcoded database variables
 $servername = "mysql";
-$username = "root";
-$password = "this-is-the-root-785-password";
+$username = "brnedan123";
+$password = "this-is-3857-password";
 $dbname = "students";
-$tablename = "students";
+$table = "students";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
