@@ -12,10 +12,10 @@ if ($password === false) {
   throw new Exception('Failed to retrieve ROSA secret from environment');
 }
 
-#$dbname = getenv('DATABASE');
-#if ($rosa_db === false) {
-#    throw new Exception('Failed to retrieve ROSA secret from environment');
-#}
+$dbname = getenv('database-name');
+if ($rosa_db === false) {
+    throw new Exception('Failed to retrieve ROSA secret from environment');
+}
 
 #$table = "students";
 #if ($table === false) {
@@ -26,7 +26,7 @@ if ($password === false) {
 $servername = "mysql";
 $username = "root";
 # $password = "this-is-the-root-785-password";
-$dbname = "students";
+# $dbname = "students";
 $tablename = "students";
 
 // Create connection
@@ -39,7 +39,7 @@ if ($conn->connect_error) {
 
 // Function to display all data from the database
 function displayData($conn) {
-  $sql = "SELECT * FROM $tablename";
+  $sql = "SELECT * FROM students";
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
