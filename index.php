@@ -7,10 +7,10 @@
 #  throw new Exception('Failed to retrieve ROSA secret from environment');
 #}
 
-#$password = getenv('DB_USER_PASSWORD');
-#if ($password === false) {
-#  throw new Exception('Failed to retrieve ROSA secret from environment');
-#}
+$password = getenv('database-root-password');
+if ($password === false) {
+  throw new Exception('Failed to retrieve ROSA secret from environment');
+}
 
 #$dbname = getenv('DATABASE');
 #if ($rosa_db === false) {
@@ -25,7 +25,7 @@
 // These are the hardcoded database variables
 $servername = "mysql";
 $username = "root";
-$password = "this-is-the-root-785-password";
+# $password = "this-is-the-root-785-password";
 $dbname = "students";
 $tablename = "students";
 
