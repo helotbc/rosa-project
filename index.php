@@ -13,7 +13,7 @@ if ($password === false) {
 }
 
 $dbname = getenv('database-name');
-if ($rosa_db === false) {
+if ($dbname === false) {
     throw new Exception('Failed to retrieve ROSA secret from environment');
 }
 
