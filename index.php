@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Registration</title>
 </head>
-<body style = "background-color: red;">
+<body style = "background-color: white;">
   <h1>Student Registration</h1>
   <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
     <label for="firstname">Firstname:</label><br>
